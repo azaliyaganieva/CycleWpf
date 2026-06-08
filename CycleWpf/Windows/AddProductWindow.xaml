@@ -1,0 +1,96 @@
+﻿<Window x:Class="CycleWpf.Windows.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CycleWpf.Windows"
+        mc:Ignorable="d"
+        Title="AddProductWindow" Height="450" Width="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,-355">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+         
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" 
+                    Text="Добавление товара" 
+                    FontSize="22" FontWeight="Bold"
+                    HorizontalAlignment="Center" Margin="10"/>
+
+           
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Фото товара:" Margin="5" VerticalAlignment="Center"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="5">
+                <Image Name="PhotoImage" Width="80" Height="80" Stretch="Uniform"/>
+                <Button Name="LoadPhotoBtn" Content="Выбрать фото" Width="100" Height="30" 
+                     Margin="10,0,0,0" Click="LoadPhotoBtn_Click"/>
+            </StackPanel>
+
+           
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Категория:" Margin="5" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="2" Grid.Column="1" Name="CategoryCmb" 
+                   DisplayMemberPath="Name" Margin="5" Height="35"/>
+
+          
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Наименование:" Margin="5" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Name="NameTxb" Margin="5" Height="35"/>
+
+           
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Описание:" Margin="5" VerticalAlignment="Top"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Name="DescriptionTxb" 
+                  Height="60" TextWrapping="Wrap" Margin="5"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Производитель:" Margin="5" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="5" Grid.Column="1" Name="ManufacturerCmb" 
+                   DisplayMemberPath="Name" Margin="5" Height="35"/>
+
+          
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Поставщик:" Margin="5" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="6" Grid.Column="1" Name="SupplierCmb" 
+                   DisplayMemberPath="Name" Margin="5" Height="35"/>
+
+            
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Цена:" Margin="5" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Name="PriceTxb" Margin="5" Height="35"/>
+
+           
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Ед.измерения:" Margin="5" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="8" Grid.Column="1" Name="UnitCmb" 
+                   DisplayMemberPath="Name" Margin="5" Height="35"/>
+
+          
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Кол-во на складе:" Margin="5" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="9" Grid.Column="1" Name="CountTxb" Margin="5" Height="35"/>
+
+           
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Скидка (%):" Margin="5" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="10" Grid.Column="1" Name="DiscountTxb" Margin="5" Height="35" Text="0"/>
+
+            
+            <StackPanel Grid.Row="10" 
+                     Orientation="Horizontal" HorizontalAlignment="Left" Margin="150,93,0,-53" Grid.Column="1">
+                <Button Name="SaveBtn" Content="Сохранить" Width="100" Height="35" 
+                     Background="#4CAF50" Foreground="White" Margin="10"
+                     Click="SaveBtn_Click"/>
+                <Button Name="CancelBtn" Content="Отмена" Width="100" Height="35" 
+                     Background="#f44336" Foreground="White" Margin="10"
+                     Click="CancelBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

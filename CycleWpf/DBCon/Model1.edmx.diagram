@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9048ef69e3fb4dcdb9da5f283a90caca" Name="Diagram1">
+        <EntityTypeShape EntityType="DemoCycleModel.Manufacturer" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.Order" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.ProductCategory" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.ProductOrder" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.RoleEmployee" Width="1.5" PointX="1.5" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.StatusOrder" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.Supplier" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.Unit" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DemoCycleModel.User" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <AssociationConnector Association="DemoCycleModel.FK_Product_Manufacturer1" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_Order_StatusOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_ProductOrder_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_Product_ProductCategory1" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_Product_Supplier1" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_Product_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_ProductOrder_Product1" ManuallyRouted="false" />
+        <AssociationConnector Association="DemoCycleModel.FK_User_RoleEmployee" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
